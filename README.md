@@ -1,11 +1,11 @@
 <p align="center" style="margin-bottom:30px;">
 <img src="https://raw.githubusercontent.com/uraimo/buildSwiftOnARM/master/logo.svg?sanitize=true"/>
-<i>Scripts to clone, configure, patch and build Swift 5.4 on Linux ARM devices.</i> 
+<i>Scripts to clone, configure, patch and build Swift 5.5 on Linux ARM devices.</i> 
 </p>
 
 
 
-For precompiled Swift 5.4 binaries see the *[Prebuilt binaries](#prebuilt-binaries)* section, if you want to build Swift on your own instead, check out the *[Building on ARM](#building-on-arm)* section and the step-by-step instructions.
+For precompiled Swift 5.5 binaries see the *[Prebuilt binaries](#prebuilt-binaries)* section, if you want to build Swift on your own instead, check out the *[Building on ARM](#building-on-arm)* section and the step-by-step instructions.
 
 ### Summary
 
@@ -33,13 +33,13 @@ For precompiled Swift 5.4 binaries see the *[Prebuilt binaries](#prebuilt-binari
 
 | OS | Architecture | Boards | Download |                                                                          
 | -- | ------------ | ------ | -------- |
-| Raspbian Buster | ARMv6 | All RaspberryPis: Classic, Zero, 2, 3, 4 | [5.4](https://github.com/uraimo/buildSwiftOnARM/releases/download/5.4/swift-5.4-armv6-RPi01234-RaspbianBuster.tgz) |
-| Raspbian Bullseye | ARMv6 | All RaspberryPis: Classic, Zero, 2, 3, 4 | [5.4]() |
-| Debian Buster | ARMv7 | Every ARMv7 board, RaspberryPis 2/3/4 included | [5.4]() |
-| Debian Bullseye | ARMv7 | Every ARMv7 board, RaspberryPis 2/3/4 included | [5.4]() |
-| Ubuntu 18.04 | ARMv7 | All versions of RaspberryPi 2/3/4, other ARMv7 boards | [5.4]() |
-| Ubuntu 20.04 | ARMv7 | All versions of RaspberryPi 2/3/4, other ARMv7 boards | [5.4]() |
-| Ubuntu 16.04/18.04 | aarch64 | All versions of RaspberryPi 3/4, other ARMv7 boards | 5.4.1: [swift-arm64](https://github.com/futurejones/swift-arm64/releases/tag/v5.4.1-RELEASE) |
+| Raspbian Buster | ARMv6 | All RaspberryPis: Classic, Zero, 2, 3, 4 | [5.5](https://github.com/uraimo/buildSwiftOnARM/releases/download/5.5/swift-5.5-armv6-RPi01234-RaspbianBuster.tgz) |
+| Raspbian Bullseye | ARMv6 | All RaspberryPis: Classic, Zero, 2, 3, 4 | [5.5]() |
+| Debian Buster | ARMv7 | Every ARMv7 board, RaspberryPis 2/3/4 included | [5.5]() |
+| Debian Bullseye | ARMv7 | Every ARMv7 board, RaspberryPis 2/3/4 included | [5.5]() |
+| Ubuntu 18.04 | ARMv7 | All versions of RaspberryPi 2/3/4, other ARMv7 boards | [5.5]() |
+| Ubuntu 20.04 | ARMv7 | All versions of RaspberryPi 2/3/4, other ARMv7 boards | [5.5]() |
+| Ubuntu 16.04/18.04 | aarch64 | All versions of RaspberryPi 3/4, other ARMv7 boards | 5.5.1: [swift-arm64](https://github.com/futurejones/swift-arm64/releases/tag/v5.5.1-RELEASE) |
  
 For binaries of older releases, check out the [releases page](https://github.com/uraimo/buildSwiftOnARM/releases).
 
@@ -82,7 +82,7 @@ Verify the swift version is setup:
 
     $ swift --version
     
-    Swift version 5.4 (swift-5.4-RELEASE)
+    Swift version 5.5 (swift-5.5-RELEASE)
     Target: armv7-unknown-linux-gnueabihf
 
 
@@ -97,7 +97,7 @@ The scripts that buildSwiftOnARM provides:
 
 - clone.sh - Install dependencies and clones the main Swift repository and all the related projects
 
-- checkoutRelease.sh - Resets all repos, updates them, checks out a specific tag (5.4 at the moment) and apply the patches.
+- checkoutRelease.sh - Resets all repos, updates them, checks out a specific tag (5.5 at the moment) and apply the patches.
 
 - build.sh - Builds Swift producing a tgz archive with the Swift distributions. 
 
@@ -131,11 +131,11 @@ Now, call the included scripts as follows:
 
 1. Launch `clone.sh` that will install the required dependencies (_git cmake ninja-build clang-3.8 python uuid-dev libicu-dev icu-devtools libbsd-dev libedit-dev libxml2-dev libsqlite3-dev swig libpython-dev libncurses5-dev pkg-config libblocksruntime-dev libcurl4-openssl-dev autoconf libtool systemtap-sdt-dev libcurl4-openssl-dev libz-dev_), fix clang links and clone apple/swift with all its dependecies.
 
-2. Run `checkoutRelease.sh` that will select the current release (5.4) and apply the needed patches.
+2. Run `checkoutRelease.sh` that will select the current release (5.5) and apply the needed patches.
 
 3. Once done, start the build with `build.sh`.
 
-4. Once the build completes a few hours later, you'll have a `swift-5.4-armv7.tgz` archive containing the whole Swift compiler distribution. Once decompressed you'll find the Swift binaries under `usr/bin`.
+4. Once the build completes a few hours later, you'll have a `swift-5.5-armv7.tgz` archive containing the whole Swift compiler distribution. Once decompressed you'll find the Swift binaries under `usr/bin`.
 
 I recommend to perform all these operations in a permanent background `tmux` or `screen` session (`CTRL+B d` to detach from the session and `tmux a` to reattach to it when you ssh again into the RaspberryPi).
 
