@@ -1,7 +1,7 @@
 #!/bin/bash
 . "$(dirname $0)/utils.sh"
 
-SCHEME=release/5.5.2
+SCHEME=release/5.6.1
 
 echo "♻️  Resetting the repositories..."
 find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "[ -d '{}'/.git ] && echo ■ Cleaning '{}' && cd '{}' && git reset --hard HEAD && git clean -fd" \;
