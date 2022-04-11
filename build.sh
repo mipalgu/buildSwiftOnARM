@@ -7,7 +7,7 @@ PACKAGE=`pwd`/swift-${REL}_${ARCH}.tgz
 
 #rm -rf $INSTALL_DIR $PACKAGE
 
-./swift/utils/build-script --preset=buildbot_linux,swiftlang-min install_destdir=$INSTALL_DIR installable_package=$PACKAGE
+./swift/utils/build-script -j4 --preset=buildbot_linux,swiftlang-min install_destdir=$INSTALL_DIR installable_package=$PACKAGE
 
 
 
