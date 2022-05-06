@@ -1,6 +1,6 @@
 <p align="center" style="margin-bottom:30px;">
 <img src="https://raw.githubusercontent.com/uraimo/buildSwiftOnARM/master/logo.svg?sanitize=true"/>
-<i>Scripts to clone, configure, patch and build Swift 5.6 on Linux ARM devices.</i> 
+<i>Scripts to clone, configure, patch and build Swift 5.6 on Linux ARM devices.</i>
 </p>
 
 
