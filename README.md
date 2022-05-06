@@ -39,6 +39,7 @@ For precompiled Swift 5.6 binaries see the *[Prebuilt binaries](#prebuilt-binari
 | Debian Bullseye | ARMv7 | Every ARMv7 board, RaspberryPis 2/3/4 included | [5.6.1]() |
 | Ubuntu 18.04 | ARMv7 | All versions of RaspberryPi 2/3/4, other ARMv7 boards | [5.6.1]() |
 | Ubuntu 20.04 | ARMv7 | All versions of RaspberryPi 2/3/4, other ARMv7 boards | [5.6.1]() |
+| Ubuntu 22.04 | ARMv7 | All versions of RaspberryPi 2/3/4, other ARMv7 boards | [5.6.1]() |
 | Ubuntu 16.04/18.04 | aarch64 | All versions of RaspberryPi 3/4, other ARMv7 boards | 5.6.1.1: [swift-arm64](https://github.com/futurejones/swift-arm64/releases/tag/v5.6.1.1-RELEASE) |
  
 For binaries of older releases, check out the [releases page](https://github.com/uraimo/buildSwiftOnARM/releases).
